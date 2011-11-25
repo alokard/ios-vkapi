@@ -49,7 +49,7 @@
     [vkWebView loadRequest:[NSURLRequest requestWithURL:url]];
     
     UIBarButtonItem* cancelButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Cancel", @"Отмена") style:UIBarButtonItemStyleBordered target:self action:@selector(cancel:)];
-    self.navigationController.navigationItem.leftBarButtonItem = cancelButton;
+    self.navigationItem.leftBarButtonItem = cancelButton;
     [cancelButton release];
 }
 

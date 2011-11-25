@@ -15,14 +15,14 @@
 
 @implementation VKAPIConnect
 
-@synthesize appID, rootViewContrller;
+@synthesize appID, rootViewContrller, isAuth;
 
 - (void)dealloc {
     self.appID = nil;
     [super dealloc];
 }
 
-#pragma mark - View lifecycle
+#pragma mark - init
 
 - (id)init
 {
@@ -35,21 +35,39 @@
     return self;
 }
 
+- (id)initWithRootViewController:(UIViewController*)aViewController
+{
+    self = [super init];
+    if (self)
+    {
+        isAuth = NO;
+        self.appID = VK_APP_ID;
+        self.rootViewContrller = aViewController;
+    }
+    return self;
+}
+
+#pragma mark - methods
+
 - (void)doAuth {
-    vkLoginViewController *vk = [[vkLoginViewController alloc] init];
-    vk.appID = appID;
-    vk.delegate = self;
-    UINavigationController* navController = [[UINavigationController alloc] initWithRootViewController:vk];
-    [vk release];
-    [rootViewContrller presentModalViewController:navController animated:YES];
-    [navController release];
-    NSLog(@"doAuth");
+    if ([self.rootViewContrller isKindOfClass:[UIViewController class]])
+    {
+        vkLoginViewController *vk = [[vkLoginViewController alloc] init];
+        vk.appID = appID;
+        vk.delegate = self;
+        UINavigationController* navController = [[UINavigationController alloc] initWithRootViewController:vk];
+        [vk release];
+        [(UIViewController*)self.rootViewContrller presentModalViewController:navController animated:YES];
+        [navController release];
+        NSLog(@"doAuth");
+    }
 }
 
 - (void) authComplete {
     [self sendSuccessWithMessage:@"Авторизация прошла успешно!"];
     isAuth = YES;
     NSLog(@"isAuth: %@", isAuth ? @"YES":@"NO");
+    [self.rootViewContrller authComplete];
 }
 
 - (void)logout {
@@ -75,7 +93,30 @@
     }
 }
 
-- (void)sendImage:(UIImage*)image {
+- (void)getMyProfile
+{
+    if(!isAuth) return;
+    
+    NSString *user_id = [[NSUserDefaults standardUserDefaults] objectForKey:@"VKAccessUserId"];
+    NSString *accessToken = [[NSUserDefaults standardUserDefaults] objectForKey:@"VKAccessToken"];
+    
+    // Создаем запрос на размещение текста на стене
+    NSString *sendTextMessage = [NSString stringWithFormat:@"https://api.vk.com/method/getProfiles?uids=%@&access_token=%@&fields=%@", user_id, accessToken, @"uid,first_name,last_name,nickname,screen_name,sex,bdate,city,country,timezone,photo,has_mobile,rate,contacts,education,counters"];
+    NSLog(@"sendTextMessage: %@", sendTextMessage);
+    
+    // Если запрос более сложный мы можем работать дальше с полученным ответом
+    NSDictionary *result = [self sendRequest:sendTextMessage withCaptcha:NO];
+    // Если есть описание ошибки в ответе
+    NSString *errorMsg = [[result objectForKey:@"error"] objectForKey:@"error_msg"];
+    if(errorMsg) {
+        [self sendFailedWithError:errorMsg];
+    } else {
+        NSLog(@"Profile: %@", result);
+        [self sendSuccessWithMessage:@"Профиль получен!"];
+    }
+}
+
+- (void)sendImage:(UIImage*)image withText:(NSString*)text {
     if(!isAuth) return;
     /*  
      
@@ -121,7 +162,8 @@
     
     // Этап 4 
     // Постим изображение на стену пользователя
-     NSString *postToWallLink = [NSString stringWithFormat:@"https://api.vk.com/method/wall.post?owner_id=%@&access_token=%@&message=%@&attachment=%@", user_id, accessToken, [self URLEncodedString:@"К изображению можно добавить текст и ссылку"], photoId];
+    NSString* postString = text ? text : @"";
+    NSString *postToWallLink = [NSString stringWithFormat:@"https://api.vk.com/method/wall.post?owner_id=%@&access_token=%@&message=%@&attachment=%@", user_id, accessToken, [self URLEncodedString:postString], photoId];
     
     NSDictionary *postToWallDict = [self sendRequest:postToWallLink withCaptcha:NO];
     NSString *errorMsg = [[postToWallDict  objectForKey:@"error"] objectForKey:@"error_msg"];
