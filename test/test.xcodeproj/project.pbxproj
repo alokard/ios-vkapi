@@ -1,0 +1,309 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EEE5C459147FADA8000EF25A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE5C458147FADA8000EF25A /* UIKit.framework */; };
+		EEE5C45B147FADA8000EF25A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE5C45A147FADA8000EF25A /* Foundation.framework */; };
+		EEE5C45D147FADA8000EF25A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEE5C45C147FADA8000EF25A /* CoreGraphics.framework */; };
+		EEE5C463147FADA8000EF25A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EEE5C461147FADA8000EF25A /* InfoPlist.strings */; };
+		EEE5C465147FADA8000EF25A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE5C464147FADA8000EF25A /* main.m */; };
+		EEE5C469147FADA8000EF25A /* MUAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE5C468147FADA8000EF25A /* MUAppDelegate.m */; };
+		EEE5C46C147FADA8000EF25A /* MUViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE5C46B147FADA8000EF25A /* MUViewController.m */; };
+		EEE5C46F147FADA8000EF25A /* MUViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEE5C46D147FADA8000EF25A /* MUViewController.xib */; };
+		EEE5C47C147FAFB7000EF25A /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE5C477147FAFB7000EF25A /* JSONKit.m */; };
+		EEE5C47D147FAFB7000EF25A /* VKAPIConnect.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE5C479147FAFB7000EF25A /* VKAPIConnect.m */; };
+		EEE5C47E147FAFB7000EF25A /* vkLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEE5C47B147FAFB7000EF25A /* vkLoginViewController.m */; };
+		EEE5C480147FB8EE000EF25A /* trollface.png in Resources */ = {isa = PBXBuildFile; fileRef = EEE5C47F147FB8EE000EF25A /* trollface.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EEE5C454147FADA8000EF25A /* test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEE5C458147FADA8000EF25A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		EEE5C45A147FADA8000EF25A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EEE5C45C147FADA8000EF25A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		EEE5C460147FADA8000EF25A /* test-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "test-Info.plist"; sourceTree = "<group>"; };
+		EEE5C462147FADA8000EF25A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EEE5C464147FADA8000EF25A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EEE5C466147FADA8000EF25A /* test-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "test-Prefix.pch"; sourceTree = "<group>"; };
+		EEE5C467147FADA8000EF25A /* MUAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MUAppDelegate.h; sourceTree = "<group>"; };
+		EEE5C468147FADA8000EF25A /* MUAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MUAppDelegate.m; sourceTree = "<group>"; };
+		EEE5C46A147FADA8000EF25A /* MUViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MUViewController.h; sourceTree = "<group>"; };
+		EEE5C46B147FADA8000EF25A /* MUViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MUViewController.m; sourceTree = "<group>"; };
+		EEE5C46E147FADA8000EF25A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MUViewController.xib; sourceTree = "<group>"; };
+		EEE5C476147FAFB7000EF25A /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		EEE5C477147FAFB7000EF25A /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		EEE5C478147FAFB7000EF25A /* VKAPIConnect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VKAPIConnect.h; sourceTree = "<group>"; };
+		EEE5C479147FAFB7000EF25A /* VKAPIConnect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VKAPIConnect.m; sourceTree = "<group>"; };
+		EEE5C47A147FAFB7000EF25A /* vkLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vkLoginViewController.h; sourceTree = "<group>"; };
+		EEE5C47B147FAFB7000EF25A /* vkLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = vkLoginViewController.m; sourceTree = "<group>"; };
+		EEE5C47F147FB8EE000EF25A /* trollface.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trollface.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EEE5C451147FADA8000EF25A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEE5C459147FADA8000EF25A /* UIKit.framework in Frameworks */,
+				EEE5C45B147FADA8000EF25A /* Foundation.framework in Frameworks */,
+				EEE5C45D147FADA8000EF25A /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EEE5C449147FADA7000EF25A = {
+			isa = PBXGroup;
+			children = (
+				EEE5C45E147FADA8000EF25A /* test */,
+				EEE5C457147FADA8000EF25A /* Frameworks */,
+				EEE5C455147FADA8000EF25A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EEE5C455147FADA8000EF25A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EEE5C454147FADA8000EF25A /* test.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EEE5C457147FADA8000EF25A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EEE5C458147FADA8000EF25A /* UIKit.framework */,
+				EEE5C45A147FADA8000EF25A /* Foundation.framework */,
+				EEE5C45C147FADA8000EF25A /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EEE5C45E147FADA8000EF25A /* test */ = {
+			isa = PBXGroup;
+			children = (
+				EEE5C475147FAFB7000EF25A /* ios-vkapi */,
+				EEE5C467147FADA8000EF25A /* MUAppDelegate.h */,
+				EEE5C468147FADA8000EF25A /* MUAppDelegate.m */,
+				EEE5C46A147FADA8000EF25A /* MUViewController.h */,
+				EEE5C46B147FADA8000EF25A /* MUViewController.m */,
+				EEE5C46D147FADA8000EF25A /* MUViewController.xib */,
+				EEE5C45F147FADA8000EF25A /* Supporting Files */,
+			);
+			path = test;
+			sourceTree = "<group>";
+		};
+		EEE5C45F147FADA8000EF25A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EEE5C47F147FB8EE000EF25A /* trollface.png */,
+				EEE5C460147FADA8000EF25A /* test-Info.plist */,
+				EEE5C461147FADA8000EF25A /* InfoPlist.strings */,
+				EEE5C464147FADA8000EF25A /* main.m */,
+				EEE5C466147FADA8000EF25A /* test-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EEE5C475147FAFB7000EF25A /* ios-vkapi */ = {
+			isa = PBXGroup;
+			children = (
+				EEE5C476147FAFB7000EF25A /* JSONKit.h */,
+				EEE5C477147FAFB7000EF25A /* JSONKit.m */,
+				EEE5C478147FAFB7000EF25A /* VKAPIConnect.h */,
+				EEE5C479147FAFB7000EF25A /* VKAPIConnect.m */,
+				EEE5C47A147FAFB7000EF25A /* vkLoginViewController.h */,
+				EEE5C47B147FAFB7000EF25A /* vkLoginViewController.m */,
+			);
+			path = "ios-vkapi";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EEE5C453147FADA8000EF25A /* test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EEE5C472147FADA8000EF25A /* Build configuration list for PBXNativeTarget "test" */;
+			buildPhases = (
+				EEE5C450147FADA8000EF25A /* Sources */,
+				EEE5C451147FADA8000EF25A /* Frameworks */,
+				EEE5C452147FADA8000EF25A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = test;
+			productName = test;
+			productReference = EEE5C454147FADA8000EF25A /* test.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EEE5C44B147FADA7000EF25A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = EEE5C44E147FADA7000EF25A /* Build configuration list for PBXProject "test" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = EEE5C449147FADA7000EF25A;
+			productRefGroup = EEE5C455147FADA8000EF25A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EEE5C453147FADA8000EF25A /* test */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EEE5C452147FADA8000EF25A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEE5C463147FADA8000EF25A /* InfoPlist.strings in Resources */,
+				EEE5C46F147FADA8000EF25A /* MUViewController.xib in Resources */,
+				EEE5C480147FB8EE000EF25A /* trollface.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EEE5C450147FADA8000EF25A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EEE5C465147FADA8000EF25A /* main.m in Sources */,
+				EEE5C469147FADA8000EF25A /* MUAppDelegate.m in Sources */,
+				EEE5C46C147FADA8000EF25A /* MUViewController.m in Sources */,
+				EEE5C47C147FAFB7000EF25A /* JSONKit.m in Sources */,
+				EEE5C47D147FAFB7000EF25A /* VKAPIConnect.m in Sources */,
+				EEE5C47E147FAFB7000EF25A /* vkLoginViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EEE5C461147FADA8000EF25A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EEE5C462147FADA8000EF25A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		EEE5C46D147FADA8000EF25A /* MUViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EEE5C46E147FADA8000EF25A /* en */,
+			);
+			name = MUViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EEE5C470147FADA8000EF25A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EEE5C471147FADA8000EF25A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EEE5C473147FADA8000EF25A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "test/test-Prefix.pch";
+				INFOPLIST_FILE = "test/test-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		EEE5C474147FADA8000EF25A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "test/test-Prefix.pch";
+				INFOPLIST_FILE = "test/test-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EEE5C44E147FADA7000EF25A /* Build configuration list for PBXProject "test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEE5C470147FADA8000EF25A /* Debug */,
+				EEE5C471147FADA8000EF25A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EEE5C472147FADA8000EF25A /* Build configuration list for PBXNativeTarget "test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EEE5C473147FADA8000EF25A /* Debug */,
+				EEE5C474147FADA8000EF25A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EEE5C44B147FADA7000EF25A /* Project object */;
+}
